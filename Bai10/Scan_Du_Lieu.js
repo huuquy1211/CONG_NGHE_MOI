@@ -14,8 +14,8 @@ function onScan(err, data) {
         console.error('Unable to scan the table. Error JSON:', JSON.stringify(err, null, 2));
     } else {
         console.log('Scan succeeded.');
-        data.Items.forEach((book) => {
-            console.log(book.name, book.year, book.type, book.author);
+        data.Items.forEach((ThongTinTapChi) => {
+            console.log(ThongTinTapChi.Id, ThongTinTapChi.NewTitle, ThongTinTapChi.PublishDate, ThongTinTapChi.Image, ThongTinTapChi.Content, ThongTinTapChi.Author, ThongTinTapChi.AuthorTitle, ThongTinTapChi.AuthorName, ThongTinTapChi.AuthorAddress);
         });
         if (typeof data.LastEvaluatedKey !== 'undefined') {
             console.log('Scanning for more...');

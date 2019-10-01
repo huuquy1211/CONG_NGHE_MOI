@@ -5,7 +5,10 @@
         "PublishDate": "tttc.PublishDate",
         "Image": "tttc.Image",
         "Content":"tttc.Content",
-        "Author":"tttc.Author"
+        "Author":"tttc.Author",
+        "AuthorTitle": "tg.AuthorTitle",
+        "AuthorName": "tg.AuthorName",
+        "AuthorAddress": "tg.AuthorAddress"
     },
     {
         "Id": "4",
@@ -13,6 +16,11 @@
         "PublishDate": "hehe",
         "Image": "haha",
         "Content":"tttc.Content",
-        "Author":"tttc.Author"
+        "Author":"tttc.Author",
+        "AuthorTitle": "tg.AuthorTitle",
+        "AuthorName": "tg.AuthorName",
+        "AuthorAddress": "tg.AuthorAddress"
     }
+
+  
 ]

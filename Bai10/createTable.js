@@ -1,9 +1,10 @@
 const AWS = require('aws-sdk');
 AWS.config.update({
     region: "local",
-    endpoint: "http://localhost:9999"
+    endpoint: "http://localhost:8000"
 });
 let dynamodb = new AWS.DynamoDB();
+console.log(dynamodb)
 let params = {
     TableName: "ThongTinTapChi",
     KeySchema: [
@@ -15,19 +16,6 @@ let params = {
         {AttributeName: "NewTitle", AttributeType: "S"},
         {AttributeName: "Id", AttributeType: "S"}
         
-    ],
-    ProvisionedThroughput: {
-        ReadCapacityUnits: 10,
-        WriteCapacityUnits: 10
-    },
-    TableName: "TacGia",
-    KeySchema: [
-        {AttributeName: "AuthorTitle", KeyType: "HASH"},
-        {AttributeName: "AuthorName", KeyType: "RANGE"}
-    ],
-    AttributeDefinitions: [
-        {AttributeName: "AuthorTitle", AttributeType: "S"},
-        {AttributeName: "AuthorName", AttributeType: "S"}
     ],
     ProvisionedThroughput: {
         ReadCapacityUnits: 10,

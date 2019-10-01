@@ -7,7 +7,6 @@ AWS.config.update({
 let docClient = new AWS.DynamoDB.DocumentClient();
 console.log('Start importing');
 let thongTinTapChi = JSON.parse(fs.readFileSync(__dirname + '/data/ThongTinTapChi.json', 'utf-8'));
-let tacGia = JSON.parse(fs.readFileSync(__dirname + '/data/TacGia.json', 'utf-8'));
 thongTinTapChi.forEach((tttc) => {
     let params = {
         TableName: "ThongTinTapChi",
@@ -17,7 +16,10 @@ thongTinTapChi.forEach((tttc) => {
             "PublishDate": tttc.PublishDate,
             "Image": tttc.Image,
             "Content": tttc.Content,
-            "Author": tttc.Author
+            "Author": tttc.Author,
+            "AuthorTitle": tttc.AuthorTitle,
+            "AuthorName": tttc.AuthorName,
+            "AuthorAddress": tttc.AuthorAddress
         }
     };
     docClient.put(params, (err, data) => {
