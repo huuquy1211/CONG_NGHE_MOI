@@ -2,7 +2,7 @@ const aws = require('aws-sdk');
 const form_functions = require(__dirname+'/funtionFormInterface.js');
 aws.config.update({
     region: "local",
-    endpoint: "http://localhost:9999"
+    endpoint: "http://localhost:8000"
 });
 let docClient = new aws.DynamoDB.DocumentClient();
 function getAllItems(res) {

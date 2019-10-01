@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 const fs = require('fs');
 AWS.config.update({
  region: 'local',
- endpoint: 'http://localhost:9999'
+ endpoint: 'http://localhost:8000'
 });
 let docClient = new AWS.DynamoDB.DocumentClient();
 console.log('Start importing');
